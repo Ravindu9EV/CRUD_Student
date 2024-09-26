@@ -1,4 +1,4 @@
-package edu.icet.crm.dto;
+package edu.icet.crm.dto.student;
 
 
 
@@ -13,12 +13,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StudentDTO {
-   private String image;
+
     private String name;
     private Integer age;
     private String contact;
 
     private String password;
+    private String image;
 
 
 }

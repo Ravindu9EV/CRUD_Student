@@ -1,6 +1,7 @@
 package edu.icet.crm.dao.student;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,13 +12,20 @@ import lombok.Setter;
 @Entity
 @Table (name = "student")
 public class StudentDAO {
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
 
-    private String image;
+
     private String name;
     private Integer age;
     private String contact;
     private String password;
+
+    @Lob
+    @Column(name="image", columnDefinition = "MEDIUMBLOB")
+    private byte[] image;
+
+
 }
