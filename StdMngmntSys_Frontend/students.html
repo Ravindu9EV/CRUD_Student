@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="CSS/student.css" />
   </head>
   <body>
     <div class="container">
@@ -23,35 +24,52 @@
           <li class="nav-item">
             <a href="students.html" class="nav-link">Students</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
           <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li> -->
         </ul>
       </header>
     </div>
 
-    <div class="container">
-      <table class="table table-dark table-hover">
-        <thead>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Contact</th>
-          <th>Password</th>
-          <th>Image Link</th>
-        </thead>
+    <div class="devi">
+      <div class="container">
+        <table id="students-table" class="table table-dark table-hover">
+          <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Contact</th>
+            <th>Password</th>
+            <th>Image Link</th>
+          </thead>
 
-        <tbody id="tbl-body"></tbody>
-      </table>
+          <tbody id="tbl-body"></tbody>
+        </table>
+      </div>
+      <div class="container">
+        <div class="card" id="student-card">
+          <h3 id="student-name"></h3>
+
+          <img
+            src=""
+            class="d-flex justify-content-start"
+            id="student-photo"
+            alt=""
+          />
+
+          <p id="student-age"></p>
+          <p id="student-contact"></p>
+          <p id="student-password"></p>
+        </div>
+      </div>
     </div>
 
-    <div class="m-2 mt-4" id="addImg">
-      <!-- <img id="imageStd" src="" style="width: 100px; height: 100px" alt="" /> -->
-    </div>
+    <!-- Card Display-->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="students.js"></script>
+    <script src="students.js" defer></script>
   </body>
 </html>

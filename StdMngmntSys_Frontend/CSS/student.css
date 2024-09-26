@@ -1,0 +1,93 @@
+#student-table{
+    width:80%;
+    margin-right: 20px;
+    margin-left: 100px;
+    height: 400px;
+   
+}
+
+#student-card{
+    position: absolute;
+    background-color: rgb(54, 180, 138);
+    border: 1px solid rgb(75, 49, 49);
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px goldenrod;
+    border-radius: 15%;
+    margin-left: 10px;
+}
+
+#student-card h3{
+    color: bisque;
+    font-weight: bold;
+}
+
+#student-card p{
+    color: rgb(244, 244, 244);
+}
+
+
+#student-photo{
+    margin-top: 10px;
+    margin-left: 80px;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%
+}
+
+#student-age{
+    margin-top: 10px;
+}
+.card {
+    text-align: center;
+}
+
+.devi{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,3fr);
+    gap: 30px;
+    margin-left: 300px;
+}
+
+@media (max-width:800px) {
+
+
+    #student-photo{
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 80px;
+        height: 60px;
+        border-radius: 50%
+    }
+
+    #student-card{
+        position: absolute;
+        background-color: aquamarine;
+        border: 1px solid rgb(75, 49, 49);
+        padding: 10px;
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 4px 8px goldenrod;
+        border-radius: 15%;
+        margin-left: 400px;
+    }
+    
+}
+
+@media (max-width:480px) {
+
+    .devi{
+        display: flex;
+        flex-direction: column;
+    }
+    #student-photo{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 40px;
+        height: 30px;
+        border-radius: 50%
+    }
+    
+}

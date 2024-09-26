@@ -18,6 +18,7 @@ function registerStudent() {
   const encodeImage = btoa(imgLink);
   console.log(encodeImage);
   console.log(atob(encodeImage));
+  console.log(imgLink + "[][][]");
 
   let imag;
   const input = document.getElementById("student-image");
@@ -40,12 +41,16 @@ function registerStudent() {
     console.log(reader.readAsDataURL(file));
   });
 
+  let imgFile = image.files[0];
+
+  let imgFileUrl = URL.createObjectURL(imgFile);
+  console.log(imgFileUrl + "uiui");
   let requestBody = {
     name: name.value,
     age: age.value,
     contact: contact.value,
     password: password.value,
-    image: encodeImage,
+    image: imgFileUrl,
   };
 
   let formData = new FormData();
@@ -54,11 +59,20 @@ function registerStudent() {
   formData.append("contact", contact.value);
   formData.append("password", password.value);
   formData.append("image", image.files[0]);
-
+  formData.append("guardian_name", document.getElementById("grd-name").value);
+  formData.append(
+    "guardian_address",
+    document.getElementById("grd-address").value
+  );
+  formData.append(
+    "guardian_contact",
+    document.getElementById("grd-contact").value
+  );
   fetch("http://localhost:8080/student/save-student", {
     method: "POST",
-    body: JSON.stringify(requestBody),
-    headers: new Headers({ "Content-type": "application/json" }),
+    // body: JSON.stringify(requestBody),
+    // headers: new Headers({ "Content-type": "application/json" }),
+    body: formData,
   })
     .then((response) => response.json())
     .then(console.log("ko"));
@@ -70,6 +84,22 @@ document.getElementById("btnImg").addEventListener("click", () => {
   );
 });
 
+// let pht = document.getElementById("student-image").files[0];
+// let phot = URL.createObjectURL(pht);
+// console.log(
+//   "data:image/jpeg;base64,"+document.getElementById("student-image").files[0].name);
+// document.getElementById("setImg").src = phot;
+// console.log(document.getElementById("student-image").src + " src");
+// console.log(document.getElementById("student-image").value.slice(11));
+
+// document.getElementById("setImg").src = URL.createObjectURL(
+//   document.getElementById("student-image").files[0]
+// );
+
+// console.log(document.getElementById("setImg").src);
+// document.getElementById("imageStd").src = URL.createObjectURL(
+//   document.getElementById("student-image").files[0]
+// );
 //display notification after successfully save
 
 function displayNotifi() {

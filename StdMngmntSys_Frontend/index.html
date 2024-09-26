@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <div class="container">
@@ -21,14 +22,23 @@
           <li class="nav-item">
             <a href="students.html" class="nav-link">Students</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
           <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li> -->
         </ul>
       </header>
     </div>
 
-    <div class="container">
+    <div id="std-from" class="container">
+      <h3>Student Details</h3>
+
+      <img
+        style="width: 150px; height: 80px; border-radius: 30px"
+        id="setImg"
+        src=""
+        alt=""
+      />
+      <button id="btnImg">setImg</button>
       <form action="" method="post" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="student-name" class="form-label">Name</label>
@@ -68,21 +78,38 @@
         </div>
         <div class="mb-3">
           <label for="student-image" class="form-label">Image</label>
-          <input class="form-control" type="file" id="student-image" />
+          <input
+            class="form-control"
+            type="file"
+            id="student-image"
+            accept="image/*"
+          />
+        </div>
+
+        
+
+        <h3>Guardian Details</h3>
+        <hr />
+        <div class="mb-3">
+          <label class="form-label" for="g-name">Guardian Name</label>
+          <input type="text" id="grd-name" class="form-control" name="" />
+        </div>
+        <div class="mb-3">
+          <label for="g-address">Address</label>
+          <input type="text" id="grd-address" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="g-contact" class="form-label">Contact</label>
+          <input type="text" id="grd-contact" class="form-control" />
         </div>
       </form>
       <div class="m-4 d-flex justify-content-center">
         <button class="btn btn-danger" id="btnSubmit">Submit</button>
+        <button class="btn btn-info" id="btnClear" style="margin-left: 10px">
+          Clear
+        </button>
       </div>
     </div>
-
-    <img
-      style="width: 150px; height: 80px"
-      id="setImg"
-      src="blob:http://127.0.0.1:5500/burger-8743791_1280.jpg"
-      alt=""
-    />
-    <button id="btnImg">setImg</button>
 
     <!-- <div id="addImg">
       <img id="imageStd" src="" style="width: 100px; height: 100px" alt="" />
